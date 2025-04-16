@@ -4,6 +4,9 @@ const { Pool } = require('pg');
 
 const app = express();
 const port = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('ברוך הבא לשרת!');
+
 
 // הגדרות DB דרך משתני סביבה
 const pool = new Pool({
